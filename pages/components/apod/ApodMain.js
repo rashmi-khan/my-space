@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ApodMain() {
+function ApodMain({image_data}) {
   return (
-    <div className='flex flex-column' >
-      <img src="/images/mars.jpeg" alt="mars-demo-picture"className='bgImage'/>
+    <div className='' >
+     <img src={image_data.url}/>
     </div>
   )
 }

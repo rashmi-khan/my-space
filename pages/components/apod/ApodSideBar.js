@@ -1,19 +1,15 @@
 import React from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-function ApodSideBar({ handleToggleImage }) {
+function ApodSideBar({ handleToggleImage,image_data }) {
   return (
-    <div className="sidebar">
+    <div className="sidebar text-white">
       <div onClick={handleToggleImage} className="bgOverlay"></div>
       <div className="sidebarContent">
-        <h4 className="text-white ">The Brutal Martian Planet</h4>
-        <div className="text-white ">
-          <p>Description</p>
-          <p>
-            dkjnsdhgwyfgbwfhbcbeuifhgerfuiewfiubcsdhjcbshdbfewsuyfewbfbsdcnbshjfcbewuyf
-          </p>
-        </div>
+        <h1 className="">{image_data.title}</h1>
+        <h2>Description</h2> 
+        <p>{image_data.explanation}</p>
         <button onClick={handleToggleImage} className="text-white font-bold">
-          <ArrowRightIcon />
+          <ArrowRightIcon size={22}/>
         </button>
       </div>
     </div>
