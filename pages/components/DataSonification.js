@@ -1,10 +1,11 @@
 import React from "react";
+import useSWR from "swr";
 
-function datasonification() {
+export default function DataSonification() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const url = "/api/sonifications";
   const { data: videos, error } = useSWR(url, fetcher);
-  console.log(videos);
+
   if (!videos)
     return <div className="text-center">Loading Sonification Data...</div>;
 
@@ -18,4 +19,3 @@ function datasonification() {
   );
 }
 
-export default datasonification;

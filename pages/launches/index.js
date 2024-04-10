@@ -13,8 +13,8 @@ export default function Launches() {
     return <div className="text-center">Failed to load lauch data</div>;
 
   return (
-    <div>
-      <section className="py-32 max-width">
+    <div className="launches bg-repeat">
+      <section className="py-12 max-width ">
         <h1 className="heading text-center mb-10">Launches</h1>
 
         <div className="max-width grid grid-cols-2 gap-5 md:grid-cols-4 lg:grid-cols-6 px-5">

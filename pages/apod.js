@@ -13,7 +13,7 @@ import useSWR from "swr";
 //   "title": "A Total Solar Eclipse over Wyoming",
 //   "url": "https://apod.nasa.gov/apod/image/2404/EclipseWyoming_Cooper_960.jpg"
 // }
-function apod() {
+function Apod() {
   const NASA_API_KEY = process.env.NEXT_PUBLIC_NASA_API_KEY;
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const url = `https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`;
@@ -34,4 +34,4 @@ function apod() {
   );
 }
 
-export default apod;
+export default Apod;
