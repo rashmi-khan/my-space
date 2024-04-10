@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function ApodMain({image_data}) {
+function ApodMain({ image_data }) {
   return (
-    <div className='' >
-     <img src={image_data.url}/>
+    <div className="flex flex-column">
+      <img src={image_data.url} />
     </div>
-  )
+  );
 }
 
-export default ApodMain
+export default ApodMain;

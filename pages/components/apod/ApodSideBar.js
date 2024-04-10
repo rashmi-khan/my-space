@@ -6,7 +6,7 @@ function ApodSideBar({ handleToggleImage,image_data }) {
       <div onClick={handleToggleImage} className="bgOverlay"></div>
       <div className="sidebarContent">
         <h1 className="">{image_data.title}</h1>
-        <h2>Description</h2> 
+        <h2 className="text-white">Description </h2> 
         <p>{image_data.explanation}</p>
         <button onClick={handleToggleImage} className="text-white font-bold">
           <ArrowRightIcon size={22}/>

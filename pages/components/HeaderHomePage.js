@@ -32,7 +32,7 @@ function Header() {
           </li>
           <li>
             <Link
-              href="/launch"
+              href="/launches"
               className="text-white text-sm lg:text-base hover:rounded-md p-2 hover:bg-slate-700 active:bg-slate-500"
             >
               SpaceX Launch

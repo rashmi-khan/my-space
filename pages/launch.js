@@ -1,10 +1,13 @@
+import React from "react";
 import ReactPlayer from "react-player";
+import InfoLaunch from "./components/spacexlaunch/InfoLaunch";
 import HeaderLaunch from "./components/spacexlaunch/HeaderLaunch";
-function launch() {
+export default function launch() {
   return (
-  <div>
-    <HeaderLaunch/>
-  </div>
+    <div>
+      <HeaderLaunch />
+      <InfoLaunch />
+    </div>
   );
 }
-export default launch;
+
