@@ -1,6 +1,5 @@
-import React from "react";
 
-function ApodMain({ image_data}) {
+export default function MainImage({ image_data}) {
   return (
     <div className="flex flex-column max-w-full object-cover">
       <img src={image_data?.url} />
@@ -9,4 +8,3 @@ function ApodMain({ image_data}) {
 }
 
 
-export default ApodMain;

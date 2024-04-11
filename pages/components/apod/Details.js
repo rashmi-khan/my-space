@@ -1,9 +1,9 @@
-import React from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-function ApodSideBar({ handleToggleImage, image_data }) {
+
+export default function Details({ handleToggleDetail, image_data }) {
   return (
     <div className="text-white">
-      <div onClick={handleToggleImage}></div>
+      <div onClick={handleToggleDetail}></div>
       <div>
         <h1 className="text-4xl text-sky-200 text-center justify-center">
           {image_data?.title}
@@ -11,7 +11,7 @@ function ApodSideBar({ handleToggleImage, image_data }) {
         <h2 className="text-2xl mb-1 ">Description </h2>
         <p>{image_data?.explanation}</p>
         <div >
-        <button onClick={handleToggleImage} className="text-white">
+        <button onClick={handleToggleDetail} className="text-white">
           <svg className="text-sky-200 m-1"
             width="25"
             height="25"
@@ -33,4 +33,3 @@ function ApodSideBar({ handleToggleImage, image_data }) {
   );
 }
 
-export default ApodSideBar;

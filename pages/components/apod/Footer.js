@@ -1,7 +1,6 @@
-import React from "react";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
 
-function ApodFooter({ showImg, handleToggleImage, image_data }) {
+export default function Footer({ handleToggleDetail, image_data }) {
   return (
     <>
       <section className="flex ">
@@ -17,7 +16,7 @@ function ApodFooter({ showImg, handleToggleImage, image_data }) {
             <h4 className="text-sky-500 text-2xl p-1">{image_data?.title}</h4>
 
             <button
-              onClick={() => handleToggleImage(true)}
+              onClick={() => handleToggleDetail(true)}
               className="text-sky-200 flex-1  "
             >
               <svg
@@ -42,4 +41,3 @@ function ApodFooter({ showImg, handleToggleImage, image_data }) {
   );
 }
 
-export default ApodFooter;

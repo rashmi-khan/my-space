@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ApodMain from "./components/apod/ApodMain";
-import ApodFooter from "./components/apod/ApodFooter";
-import ApodSideBar from "./components/apod/ApodSideBar";
+import MainImage from "./components/apod/MainImage";
+import Footer from "./components/apod/Footer";
+import Details from "./components/apod/Details";
 import useSWR from "swr";
 
 function Apod() {
@@ -10,17 +10,18 @@ function Apod() {
   const url = `https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`;
   const { data: image_data,error } = useSWR(url, fetcher);
 
-  const [showImg, setshowImg] = useState(false);
-  function handleToggleImage() {
-    setshowImg(!showImg);
+  const [showDetail, setShowDetail] = useState(false);
+  
+  function handleToggleDetail() {
+    setShowDetail(!showDetail);
   }
   
 
   return (
     <>
-      { image_data? <ApodMain  image_data={image_data}  /> : <h1 className="text-white">Loading....</h1>}
-      {showImg && <ApodSideBar handleToggleImage={handleToggleImage} image_data={image_data}/>}
-      {image_data && <ApodFooter handleToggleImage={handleToggleImage} image_data={image_data}/>}
+      { image_data? <MainImage  image_data={image_data}  /> : <h1 className="text-white">Loading....</h1>}
+      {showDetail && <Details handleToggleDetail={handleToggleDetail} image_data={image_data}/>}
+      {image_data && <Footer handleToggleDetail={handleToggleDetail} image_data={image_data}/>}
     </>
   );
 }
