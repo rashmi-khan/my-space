@@ -20,14 +20,14 @@ function Apod() {
   const { data: image_data,error } = useSWR(url, fetcher);
 
   const [showImg, setshowImg] = useState(false);
-
   function handleToggleImage() {
     setshowImg(!showImg);
   }
+  
 
   return (
     <>
-      {image_data ? <ApodMain  image_data={image_data} /> : <h1 className="text-white">Loading....</h1>}
+      { image_data? <ApodMain  image_data={image_data}  /> : <h1 className="text-white">Loading....</h1>}
       {showImg && <ApodSideBar handleToggleImage={handleToggleImage} image_data={image_data}/>}
       {image_data && <ApodFooter handleToggleImage={handleToggleImage} image_data={image_data}/>}
     </>

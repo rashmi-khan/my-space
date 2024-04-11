@@ -17,9 +17,9 @@ export default function Launches() {
       <section className="py-12 max-width ">
         <h1 className="heading text-center mb-10">Launches</h1>
 
-        <div className="max-width grid grid-cols-2 gap-5 md:grid-cols-4 lg:grid-cols-6 px-5">
+        <div className="max-width grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 px-20">
           {launches.map(({ id, name, links, details }) => (
-            <Link href={`/launches/${id}`} key={id} className="p-5 bg-zinc-900">
+            <Link href={`/launches/${id}`} key={id} className="p-5 bg-stone-900">
               {links.patch.small ? (
                 <img src={links.patch.small} alt={name} />
               ) : (

@@ -23,7 +23,7 @@ export default function DataSonification() {
           </h2>
         </article>
 
-        <div className="max-width grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 px-5 text-white">
+        <div className= "max-width grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 px-20">
           {videos.map(({ url, title, description }) => {
             return (
               <div key={url}>
@@ -50,3 +50,4 @@ export default function DataSonification() {
     </div>
   );
 }
+// "max-width grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 px-5 text-white"
