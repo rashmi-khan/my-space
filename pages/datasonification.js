@@ -26,7 +26,7 @@ export default function DataSonification() {
         <div className="max-width grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 px-20">
           {videos.map(({ url, title, description }) => {
             return (
-              <VideoPlayer url={url} title={title} description={description} />
+              <VideoPlayer url={url} title={title} description={description} key={url}/>
             );
           })}
         </div>
