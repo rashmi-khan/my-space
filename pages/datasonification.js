@@ -1,5 +1,5 @@
-import ReactPlayer from "react-player";
 import useSWR from "swr";
+import VideoPlayer from "./components/sonifications/VideoPlayer";
 
 export default function DataSonification() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -23,26 +23,10 @@ export default function DataSonification() {
           </h2>
         </article>
 
-        <div className= "max-width grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 px-20">
+        <div className="max-width grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 px-20">
           {videos.map(({ url, title, description }) => {
             return (
-              <div key={url}>
-                <ReactPlayer
-                  url={url}
-                  width="100%"
-                  height="400px"
-                  controls={true}
-                  key={url}
-                />
-                <div className="text-center ">
-                  <h1 className="text-white font-light text-2xl pb-10 pt-10 ">
-                    {title}
-                  </h1>
-                  <p className="text-white opacity-75 line-clamp-3  ">
-                    {description}
-                  </p>
-                </div>
-              </div>
+              <VideoPlayer url={url} title={title} description={description} />
             );
           })}
         </div>
@@ -50,4 +34,3 @@ export default function DataSonification() {
     </div>
   );
 }
-// "max-width grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 px-5 text-white"
