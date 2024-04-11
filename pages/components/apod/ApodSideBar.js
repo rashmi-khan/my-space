@@ -6,10 +6,10 @@ function ApodSideBar({ handleToggleImage, image_data }) {
       <div onClick={handleToggleImage}></div>
       <div>
         <h1 className="text-4xl text-sky-200 text-center justify-center">
-          {image_data.title}
+          {image_data?.title}
         </h1>
         <h2 className="text-2xl mb-1 ">Description </h2>
-        <p>{image_data.explanation}</p>
+        <p>{image_data?.explanation}</p>
         <div >
         <button onClick={handleToggleImage} className="text-white">
           <svg className="text-sky-200 m-1"

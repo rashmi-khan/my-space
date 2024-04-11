@@ -11,10 +11,10 @@ function ApodFooter({ showImg, handleToggleImage, image_data }) {
           </h1>
 
           <h2 className="text-sky-200 text-2xl font-semibold ">
-            ( {image_data.date} )
+            ( {image_data?.date} )
           </h2>
           <div>
-            <h4 className="text-sky-500 text-2xl p-1">{image_data.title}</h4>
+            <h4 className="text-sky-500 text-2xl p-1">{image_data?.title}</h4>
 
             <button
               onClick={() => handleToggleImage(true)}
