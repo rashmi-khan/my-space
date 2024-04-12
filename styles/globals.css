@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 img{
-  max-width:100%;
+max-width:100%;
 width:100%;
 }
 body {
@@ -50,3 +50,6 @@ p{
   
 } 
 
+.notfound{
+  background: url("/images/bg_notfound.jpeg") ;
+}
