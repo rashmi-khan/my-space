@@ -2,7 +2,7 @@
 import ReactPlayer from "react-player";
 
 export default function MainImage({ image_data }) {
-  const isVideo = image_data.media_type === "video"
+  const isVideo = image_data?.media_type === "video"
 
   return (
     <div className=" flex flex-column h-auto max-w-full text-white ">
